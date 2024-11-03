@@ -2,7 +2,7 @@ const NavText = () => {
   return (
     <div>
       {/* hero */}
-      <div className="hero bg-headerBg rounded-b-xl">
+      <div className="hero bg-headerBg rounded-b-xl relative">
         <div className="hero-content text-center">
           <div className="pb-64">
             <h1 className="text-[32px]  md:text-[44px] lg:text-[56px] font-bold text-white">

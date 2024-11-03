@@ -12,24 +12,23 @@ const Footer = () => {
       <div className="border my-8"></div>
       <footer className=" flex flex-col md:flex-row justify-center gap-[20px] md:gap-[168px] text-center md:text-start bg-footerBg shadow-sm ">
         <div className="flex flex-col">
-          <h6 className="footer-title">Services</h6>
-          <NavLink className="link link-hover">Branding</NavLink>
-          <NavLink className="link link-hover">Design</NavLink>
-          <NavLink className="link link-hover">Marketing</NavLink>
-          <NavLink className="link link-hover">Advertisement</NavLink>
+          <h6 className="text-xl font-bold mb-4">Services</h6>
+          <NavLink className="text-gray-600">Product Support</NavLink>
+          <NavLink className="text-gray-600">Order Tracking</NavLink>
+          <NavLink className="text-gray-600">Shipping & Delivery</NavLink>
+          <NavLink className="text-gray-600">Returns</NavLink>
         </div>
         <div className="flex flex-col">
-          <h6 className="footer-title">Company</h6>
-          <NavLink className="link link-hover">About us</NavLink>
-          <NavLink className="link link-hover">Contact</NavLink>
-          <NavLink className="link link-hover">Jobs</NavLink>
-          <NavLink className="link link-hover">Press kit</NavLink>
+          <h6 className="text-xl font-bold mb-4">Company</h6>
+          <NavLink className="text-gray-600">About us</NavLink>
+          <NavLink className="text-gray-600">Careers</NavLink>
+          <NavLink className="text-gray-600">Contact</NavLink>
         </div>
         <div className="flex flex-col">
-          <h6 className="footer-title">Legal</h6>
-          <NavLink className="link link-hover">Terms of use</NavLink>
-          <NavLink className="link link-hover">Privacy policy</NavLink>
-          <NavLink className="link link-hover">Cookie policy</NavLink>
+          <h6 className="text-xl font-bold mb-4">Legal</h6>
+          <NavLink className="text-gray-600">Terms of use</NavLink>
+          <NavLink className="text-gray-600">Privacy policy</NavLink>
+          <NavLink className="text-gray-600">Cookie policy</NavLink>
         </div>
       </footer>
     </>

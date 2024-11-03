@@ -8,6 +8,9 @@ export default {
         headerBg: "rgb(149, 56, 226)",
         footerBg: "rgb(255, 255, 255)",
       },
+      backgroundImage: {
+        banner: "url('./assets/banner.jpg')",
+      },
     },
   },
   plugins: [require("daisyui")],
