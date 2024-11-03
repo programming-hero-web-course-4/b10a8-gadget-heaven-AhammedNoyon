@@ -3,7 +3,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        headerBg: "rgb(149, 56, 226)",
+        footerBg: "rgb(255, 255, 255)",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };

@@ -1,0 +1,171 @@
+[
+  {
+    "product-id": "201",
+    "product-title": "Noise-Cancelling Over-Ear Headphones",
+    "product-image": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
+    "category": "Electronics",
+    "price": 129.99,
+    "description": "High-quality over-ear headphones with advanced noise-cancellation.",
+    "specification": [
+      "Over-ear design",
+      "Active noise cancellation",
+      "Bluetooth 5.0",
+      "30-hour battery life",
+      "Built-in microphone"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product-id": "202",
+    "product-title": "Portable Bluetooth Speaker",
+    "product-image": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "category": "Electronics",
+    "price": 89.99,
+    "description": "Compact and powerful Bluetooth speaker with deep bass.",
+    "specification": [
+      "10W output",
+      "Water-resistant",
+      "12-hour playtime",
+      "Bluetooth 5.0",
+      "Built-in mic"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product-id": "203",
+    "product-title": "4K Ultra HD Smart TV",
+    "product-image": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
+    "category": "Electronics",
+    "price": 499.99,
+    "description": "Ultra HD Smart TV with HDR support and streaming capabilities.",
+    "specification": [
+      "4K Ultra HD",
+      "HDR support",
+      "60Hz refresh rate",
+      "Smart TV features",
+      "3 HDMI ports"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product-id": "204",
+    "product-title": "Stainless Steel Vacuum Thermos",
+    "product-image": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "category": "Home & Kitchen",
+    "price": 55.0,
+    "description": "Durable stainless steel vacuum thermos for keeping beverages hot or cold.",
+    "specification": [
+      "Double-walled insulation",
+      "Leak-proof",
+      "1-liter capacity",
+      "BPA-free",
+      "Keeps hot for 12 hours, cold for 24 hours"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product-id": "205",
+    "product-title": "Ceramic Non-Stick Frying Pan",
+    "product-image": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
+    "category": "Home & Kitchen",
+    "price": 65.0,
+    "description": "Non-stick frying pan made with ceramic coating for easy cleaning.",
+    "specification": [
+      "Non-stick ceramic coating",
+      "Dishwasher safe",
+      "Ergonomic handle",
+      "10-inch diameter",
+      "PFOA-free"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product-id": "206",
+    "product-title": "Smart Thermostat",
+    "product-image": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "category": "Smart Home",
+    "price": 159.99,
+    "description": "Programmable smart thermostat compatible with Alexa and Google Home.",
+    "specification": [
+      "App control",
+      "Energy-saving features",
+      "Compatible with Alexa and Google Home",
+      "Touchscreen display",
+      "Easy installation"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product-id": "207",
+    "product-title": "Smart LED Light Bulbs (4-Pack)",
+    "product-image": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
+    "price": 69.99,
+    "description": "Smart LED light bulbs with adjustable colors and brightness, controlled via app.",
+    "specification": [
+      "16 million colors",
+      "App and voice control",
+      "Energy efficient",
+      "60W equivalent",
+      "WiFi enabled"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product-id": "208",
+    "product-title": "Gaming Keyboard with RGB Lighting",
+    "product-image": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "category": "Computers & Accessories",
+    "price": 79.99,
+    "description": "Mechanical gaming keyboard with customizable RGB lighting.",
+    "specification": [
+      "Mechanical keys",
+      "RGB lighting",
+      "Anti-ghosting",
+      "Durable build",
+      "USB connection"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product-id": "209",
+    "product-title": "Ergonomic Office Chair",
+    "product-image": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "category": "Computers & Accessories",
+    "price": 199.99,
+    "description": "Comfortable ergonomic office chair with adjustable height and lumbar support.",
+    "specification": [
+      "Adjustable height",
+      "Lumbar support",
+      "Breathable mesh back",
+      "360-degree swivel",
+      "5-point base"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product-id": "210",
+    "product-title": "Laptop Stand with Cooling Fan",
+    "product-image": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "category": "Computers & Accessories",
+    "price": 59.99,
+    "description": "Adjustable laptop stand with built-in cooling fan.",
+    "specification": [
+      "Aluminum build",
+      "Adjustable angles",
+      "Cooling fan",
+      "Portable design",
+      "Non-slip pads"
+    ],
+    "availability": true,
+    "rating": 4.4
+  }
+]
