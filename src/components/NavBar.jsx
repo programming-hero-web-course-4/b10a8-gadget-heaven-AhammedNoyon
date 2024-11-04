@@ -5,7 +5,7 @@ import NavText from "./NavText";
 
 const NavBar = () => {
   return (
-    <div className="border p-2 rounded-xl">
+    <div className="border p-2 rounded-xl relative">
       <div className=" bg-headerBg rounded-t-xl">
         <div className="navbar px-8 md:px-32 py-7  ">
           <div className="navbar-start">
@@ -58,7 +58,13 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <NavText></NavText>
+      <NavText
+        title="Upgrade Your Tech Accessorize with Gadget Heaven Accessories"
+        subtitle="Explore the latest gadgets that will take your experience to the
+              next level. From smart devices to the coolest accessories, we have
+              it all!"
+        buttonText="Shop Now"
+      ></NavText>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+[
+  {
+    "productId": "1",
+    "category": "Laptop"
+  },
+  {
+    "productId": "2",
+    "category": "Phone"
+  },
+  {
+    "productId": "3",
+    "category": "Smart Watch"
+  }
+]

@@ -1,9 +1,9 @@
 [
   {
-    "product-id": "201",
-    "product-title": "Noise-Cancelling Over-Ear Headphones",
-    "product-image": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
-    "category": "Electronics",
+    "productId": "201",
+    "productTitle": "Laptop",
+    "productImage": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
+    "category": "Laptop",
     "price": 129.99,
     "description": "High-quality over-ear headphones with advanced noise-cancellation.",
     "specification": [
@@ -17,10 +17,10 @@
     "rating": 4.6
   },
   {
-    "product-id": "202",
-    "product-title": "Portable Bluetooth Speaker",
-    "product-image": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
-    "category": "Electronics",
+    "productId": "202",
+    "productTitle": "Phone",
+    "productImage": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "category": "Phone",
     "price": 89.99,
     "description": "Compact and powerful Bluetooth speaker with deep bass.",
     "specification": [
@@ -34,10 +34,10 @@
     "rating": 4.8
   },
   {
-    "product-id": "203",
-    "product-title": "4K Ultra HD Smart TV",
-    "product-image": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
-    "category": "Electronics",
+    "productId": "203",
+    "productTitle": "Laptop",
+    "productImage": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
+    "category": "Laptop",
     "price": 499.99,
     "description": "Ultra HD Smart TV with HDR support and streaming capabilities.",
     "specification": [
@@ -51,10 +51,10 @@
     "rating": 4.7
   },
   {
-    "product-id": "204",
-    "product-title": "Stainless Steel Vacuum Thermos",
-    "product-image": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
-    "category": "Home & Kitchen",
+    "productId": "204",
+    "productTitle": "Phone",
+    "productImage": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "category": "Phone",
     "price": 55.0,
     "description": "Durable stainless steel vacuum thermos for keeping beverages hot or cold.",
     "specification": [
@@ -68,10 +68,10 @@
     "rating": 4.5
   },
   {
-    "product-id": "205",
-    "product-title": "Ceramic Non-Stick Frying Pan",
-    "product-image": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
-    "category": "Home & Kitchen",
+    "productId": "205",
+    "productTitle": "Laptop",
+    "productImage": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
+    "category": "Laptop",
     "price": 65.0,
     "description": "Non-stick frying pan made with ceramic coating for easy cleaning.",
     "specification": [
@@ -85,10 +85,10 @@
     "rating": 4.6
   },
   {
-    "product-id": "206",
-    "product-title": "Smart Thermostat",
-    "product-image": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
-    "category": "Smart Home",
+    "productId": "206",
+    "productTitle": "mart Watch",
+    "productImage": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "category": "Smart Watch",
     "price": 159.99,
     "description": "Programmable smart thermostat compatible with Alexa and Google Home.",
     "specification": [
@@ -102,9 +102,10 @@
     "rating": 4.7
   },
   {
-    "product-id": "207",
-    "product-title": "Smart LED Light Bulbs (4-Pack)",
-    "product-image": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
+    "productId": "207",
+    "productTitle": "Laptop",
+    "category": "Laptop",
+    "productImage": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
     "price": 69.99,
     "description": "Smart LED light bulbs with adjustable colors and brightness, controlled via app.",
     "specification": [
@@ -118,10 +119,10 @@
     "rating": 4.4
   },
   {
-    "product-id": "208",
-    "product-title": "Gaming Keyboard with RGB Lighting",
-    "product-image": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
-    "category": "Computers & Accessories",
+    "productId": "208",
+    "productTitle": "Smart Watch",
+    "productImage": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "category": "Smart Watch",
     "price": 79.99,
     "description": "Mechanical gaming keyboard with customizable RGB lighting.",
     "specification": [
@@ -135,10 +136,10 @@
     "rating": 4.6
   },
   {
-    "product-id": "209",
-    "product-title": "Ergonomic Office Chair",
-    "product-image": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
-    "category": "Computers & Accessories",
+    "productId": "209",
+    "productTitle": "Laptop",
+    "productImage": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "category": "Laptop",
     "price": 199.99,
     "description": "Comfortable ergonomic office chair with adjustable height and lumbar support.",
     "specification": [
@@ -152,10 +153,10 @@
     "rating": 4.5
   },
   {
-    "product-id": "210",
-    "product-title": "Laptop Stand with Cooling Fan",
-    "product-image": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
-    "category": "Computers & Accessories",
+    "productId": "210",
+    "productTitle": "Laptop",
+    "productImage": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "category": "Laptop",
     "price": 59.99,
     "description": "Adjustable laptop stand with built-in cooling fan.",
     "specification": [
