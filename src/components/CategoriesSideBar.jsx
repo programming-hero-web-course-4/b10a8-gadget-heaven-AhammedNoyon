@@ -12,7 +12,14 @@ const CategoriesSideBar = ({ categories }) => {
               className="text-xl font-medium bg-gray-200 py-3 px-4 rounded-full"
               key={category.productId}
             >
-              <NavLink to={`/category/${category.category}`}>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? " bg-black  text-warning shadow-sm p-2 rounded-xl"
+                    : ""
+                }
+                to={`/category/${category.category}`}
+              >
                 {category.category}
               </NavLink>
             </li>

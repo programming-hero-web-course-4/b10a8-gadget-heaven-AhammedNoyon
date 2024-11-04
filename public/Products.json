@@ -2,7 +2,7 @@
   {
     "productId": "201",
     "productTitle": "Laptop",
-    "productImage": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
+    "productImage": "https://i.ibb.co.com/Htws41b/1701658482794.jpg",
     "category": "Laptop",
     "price": 129.99,
     "description": "High-quality over-ear headphones with advanced noise-cancellation.",
@@ -13,13 +13,13 @@
       "30-hour battery life",
       "Built-in microphone"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.6
   },
   {
     "productId": "202",
     "productTitle": "Phone",
-    "productImage": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "productImage": "https://i.ibb.co.com/s2GKGhn/pexels-luckysam-47261.jpg",
     "category": "Phone",
     "price": 89.99,
     "description": "Compact and powerful Bluetooth speaker with deep bass.",
@@ -30,13 +30,13 @@
       "Bluetooth 5.0",
       "Built-in mic"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.8
   },
   {
     "productId": "203",
     "productTitle": "Laptop",
-    "productImage": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
+    "productImage": "https://i.ibb.co.com/z4v1Pp1/alex-knight-j4uu-Kn-N43-M-unsplash.jpg",
     "category": "Laptop",
     "price": 499.99,
     "description": "Ultra HD Smart TV with HDR support and streaming capabilities.",
@@ -47,13 +47,13 @@
       "Smart TV features",
       "3 HDMI ports"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.7
   },
   {
     "productId": "204",
     "productTitle": "Phone",
-    "productImage": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "productImage": "https://i.ibb.co.com/L9MRHKs/pexels-silvie-63690.jpg",
     "category": "Phone",
     "price": 55.0,
     "description": "Durable stainless steel vacuum thermos for keeping beverages hot or cold.",
@@ -64,13 +64,13 @@
       "BPA-free",
       "Keeps hot for 12 hours, cold for 24 hours"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.5
   },
   {
     "productId": "205",
     "productTitle": "Laptop",
-    "productImage": "https://i.ibb.co.com/7gj8Wd4/designed-sunglasses-red-book-grey-surface.jpg",
+    "productImage": "https://i.ibb.co.com/1mxB470/istockphoto-1174106827-612x612.jpg",
     "category": "Laptop",
     "price": 65.0,
     "description": "Non-stick frying pan made with ceramic coating for easy cleaning.",
@@ -81,13 +81,13 @@
       "10-inch diameter",
       "PFOA-free"
     ],
-    "availability": true,
+    "availability": "Stock Out",
     "rating": 4.6
   },
   {
     "productId": "206",
-    "productTitle": "mart Watch",
-    "productImage": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "productTitle": "Smart Watch",
+    "productImage": "https://i.ibb.co.com/rkjxz7Z/pexels-jatin-anand-33853-125779.jpg",
     "category": "Smart Watch",
     "price": 159.99,
     "description": "Programmable smart thermostat compatible with Alexa and Google Home.",
@@ -98,14 +98,14 @@
       "Touchscreen display",
       "Easy installation"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.7
   },
   {
     "productId": "207",
     "productTitle": "Laptop",
     "category": "Laptop",
-    "productImage": "https://i.ibb.co.com/4sd1DV8/retro-camera.jpg",
+    "productImage": "https://i.ibb.co.com/Htws41b/1701658482794.jpg",
     "price": 69.99,
     "description": "Smart LED light bulbs with adjustable colors and brightness, controlled via app.",
     "specification": [
@@ -121,7 +121,7 @@
   {
     "productId": "208",
     "productTitle": "Smart Watch",
-    "productImage": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "productImage": "https://i.ibb.co.com/F7pbyVQ/pexels-ferarcosn-190819.jpg",
     "category": "Smart Watch",
     "price": 79.99,
     "description": "Mechanical gaming keyboard with customizable RGB lighting.",
@@ -132,13 +132,13 @@
       "Durable build",
       "USB connection"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.6
   },
   {
     "productId": "209",
     "productTitle": "Laptop",
-    "productImage": "https://i.ibb.co.com/pR9bHXW/keyboard-isolated-white-background-3d-render-illustration.jpg",
+    "productImage": "https://i.ibb.co.com/BnwWN78/kari-shea-1-SAnr-Ixw5-OY-unsplash.jpg",
     "category": "Laptop",
     "price": 199.99,
     "description": "Comfortable ergonomic office chair with adjustable height and lumbar support.",
@@ -149,13 +149,13 @@
       "360-degree swivel",
       "5-point base"
     ],
-    "availability": true,
+    "availability": "Stock Out",
     "rating": 4.5
   },
   {
     "productId": "210",
     "productTitle": "Laptop",
-    "productImage": "https://i.ibb.co.com/jZwMhRG/silver-term.jpg",
+    "productImage": "https://i.ibb.co.com/r7jcj4Q/maxim-hopman-Hin-rzh-Od-Ws-unsplash.jpg",
     "category": "Laptop",
     "price": 59.99,
     "description": "Adjustable laptop stand with built-in cooling fan.",
@@ -166,7 +166,7 @@
       "Portable design",
       "Non-slip pads"
     ],
-    "availability": true,
+    "availability": "In Stock",
     "rating": 4.4
   }
 ]

@@ -1,6 +1,7 @@
 import PropType from "prop-types";
+import { useNavigate } from "react-router-dom";
 const Card = ({ singleProduct }) => {
-  console.log(singleProduct);
+  // console.log(singleProduct);
   const {
     productId,
     productTitle,
@@ -12,6 +13,11 @@ const Card = ({ singleProduct }) => {
     availability,
     rating,
   } = singleProduct;
+  // const { productId } = useParams();
+  const navigate = useNavigate();
+  const handleView = () => {
+    navigate(`/product/${productId}`);
+  };
   return (
     <div className="border p-4 rounded-xl h-fit space-y-4 shadow-xl">
       <img
@@ -25,7 +31,10 @@ const Card = ({ singleProduct }) => {
           Price: {price}
         </small>
       </p>
-      <button className="text-headerBg border-2 border-headerBg text-xl font-medium rounded-full p-2 px-4 mb-5">
+      <button
+        onClick={() => handleView()}
+        className="text-headerBg border-2 border-headerBg text-xl font-medium rounded-full p-2 px-4 mb-5"
+      >
         View Details
       </button>
     </div>

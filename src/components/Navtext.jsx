@@ -1,10 +1,25 @@
 import PropType from "prop-types";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 const NavText = ({ title, subtitle, buttonText }) => {
+  const location = useLocation();
+  const [NavTextBg, setNavTextBg] = useState(false);
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setNavTextBg(true);
+    }
+    // else if (location.pathname === `/product/${[productId]}`) {
+    //   setNavTextBg(true);
+    // }
+  }, [location]);
   return (
     <div>
       {/* hero */}
-      <div className="hero bg-headerBg rounded-b-xl">
+      <div
+        className={`hero bg-headerBg ${
+          NavTextBg === true ? "rounded-b-xl" : "rounded-xl"
+        }`}
+      >
         <div className="hero-content text-center">
           <div className="pb-64">
             <h1 className="text-[32px]  md:text-[44px] lg:text-[56px] font-bold text-white">

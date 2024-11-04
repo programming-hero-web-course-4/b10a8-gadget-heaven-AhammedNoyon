@@ -1,21 +1,68 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import NavText from "./NavText";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const location = useLocation();
+  const [navBg, setNavBg] = useState("white");
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setNavBg("headerBg");
+    } else {
+      setNavBg("white");
+    }
+  }, [location]);
   return (
     <div className="border p-2 rounded-xl relative">
-      <div className=" bg-headerBg rounded-t-xl">
+      <div className={`bg-${navBg}`}>
         <div className="navbar px-8 md:px-32 py-7  ">
           <div className="navbar-start">
-            <a className="text-xl font-bold text-white">Gadget Heaven</a>
+            <a
+              className={`text-xl font-bold ${
+                navBg === "headerBg" ? "text-white" : ""
+              }`}
+            >
+              Gadget Heaven
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex ">
-            <ul className="menu menu-horizontal gap-12 px-1 text-lg font-medium text-white">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/statistics">Statistics</NavLink>
-              <NavLink to="/dashboard">Dashboard</NavLink>
+            <ul
+              className={`menu menu-horizontal gap-12 px-1 text-lg font-medium ${
+                navBg === "headerBg" ? "text-white" : ""
+              } items-center`}
+            >
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                    : ""
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                    : ""
+                }
+                to="/statistics"
+              >
+                Statistics
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                    : ""
+                }
+                to="/dashboard"
+              >
+                Dashboard
+              </NavLink>
             </ul>
           </div>
           <div className="navbar-end">
@@ -29,7 +76,9 @@ const NavBar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden text-white "
+                className={`btn btn-ghost lg:hidden ${
+                  navBg === "headerBg" ? "text-white" : ""
+                }`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,21 +99,50 @@ const NavBar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 -ml-16 p-2 shadow text-lg font-bold"
               >
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/statistics">Statistics</NavLink>
-                <NavLink to="/dashboard">Dashboard</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                      : ""
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                      : ""
+                  }
+                  to="/statistics"
+                >
+                  Statistics
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                      : ""
+                  }
+                  to="/dashboard"
+                >
+                  Dashboard
+                </NavLink>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <NavText
-        title="Upgrade Your Tech Accessorize with Gadget Heaven Accessories"
-        subtitle="Explore the latest gadgets that will take your experience to the
+      {navBg === "headerBg" && (
+        <NavText
+          title="Upgrade Your Tech Accessorize with Gadget Heaven Accessories"
+          subtitle="Explore the latest gadgets that will take your experience to the
               next level. From smart devices to the coolest accessories, we have
               it all!"
-        buttonText="Shop Now"
-      ></NavText>
+          buttonText="Shop Now"
+        ></NavText>
+      )}
     </div>
   );
 };

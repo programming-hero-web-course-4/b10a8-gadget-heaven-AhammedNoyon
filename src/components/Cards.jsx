@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Cards = () => {
   const data = useLoaderData();
   const { category } = useParams();
-  console.log(data);
+  // console.log(data);
   const [p, setP] = useState([]);
   useEffect(() => {
     if (category) {
