@@ -5,13 +5,15 @@ import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import Cards from "../Cards";
 import ProductDetails from "../pages/ProductDetails";
-import DashboardCard from "../DashboardCard";
+
 import ContactUs from "../pages/ContactUs";
+import ErrorPage from "../ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -37,13 +39,6 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        children: [
-          {
-            path: "/dashboard/:productId",
-            element: <DashboardCard></DashboardCard>,
-            loader: () => fetch("../products.json"),
-          },
-        ],
       },
       {
         path: "/contact",

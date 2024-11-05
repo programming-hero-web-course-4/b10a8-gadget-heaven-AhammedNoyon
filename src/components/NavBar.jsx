@@ -3,6 +3,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import NavText from "./NavText";
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const NavBar = () => {
   const { productId } = useParams();
@@ -154,6 +156,7 @@ const NavBar = () => {
           buttonText="Shop Now"
         ></NavText>
       )}
+      <ToastContainer position="top-center" autoClose={2000} />;
     </div>
   );
 };

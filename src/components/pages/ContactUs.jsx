@@ -1,9 +1,15 @@
 import NavText from "../NavText";
 import contactImg from "../../assets/contact.jpg";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact-Us</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div>
         <NavText
           title="Contact Us"

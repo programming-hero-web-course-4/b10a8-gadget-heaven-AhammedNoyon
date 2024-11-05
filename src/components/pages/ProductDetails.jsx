@@ -8,6 +8,7 @@ import {
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import NavText from "../NavText";
+import { addCartInStore } from "../../utilities/LocalStrage";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -38,9 +39,14 @@ const ProductDetails = () => {
     }
   }, [location, productId]);
 
-  const doNavigate = useNavigate();
-  const handleAddCardAndHeart = () => {
-    doNavigate(`/dashboard/${productId}`);
+  // const doNavigate = useNavigate();
+  const handleAddCard = () => {
+    // doNavigate("/dashboard");
+    addCartInStore(pDetails);
+  };
+  const handleHeart = () => {
+    // doNavigate("/dashboard");
+    addCartInStore(pDetails);
   };
 
   return (
@@ -52,7 +58,7 @@ const ProductDetails = () => {
           buttonText="Shop Now"
         ></NavText>
       )}
-      <div className="relative flex justify-center mb-[500px] lg:mb-96">
+      <div className="relative flex justify-center mb-[500px] lg:mb-96 mt-52">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 shadow-xl p-8 rounded-xl w-3/5 mx-auto  absolute bg-white -mt-64 ">
           <div className="col-span-2">
             <img
@@ -90,7 +96,7 @@ const ProductDetails = () => {
             </h3>
             <div className="flex gap-8">
               <button
-                onClick={handleAddCardAndHeart}
+                onClick={handleAddCard}
                 className="btn bg-headerBg rounded-full text-white font-bold text-base"
               >
                 <span>Add to card icon</span>
@@ -98,10 +104,7 @@ const ProductDetails = () => {
                   <FaShoppingCart />
                 </span>
               </button>
-              <button
-                onClick={handleAddCardAndHeart}
-                className="btn rounded-full"
-              >
+              <button onClick={handleHeart} className="btn rounded-full">
                 <FaRegHeart />
               </button>
             </div>

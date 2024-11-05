@@ -2,13 +2,19 @@ import Banner from "../Banner";
 import { Outlet, useLoaderData } from "react-router-dom";
 import CategoriesSideBar from "../CategoriesSideBar";
 import Heading from "../Heading";
-import NavText from "../NavText";
+
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const categories = useLoaderData();
   // console.log(categories);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       {/* banner */}
       <Banner></Banner>
       {/* dynamic part*/}
