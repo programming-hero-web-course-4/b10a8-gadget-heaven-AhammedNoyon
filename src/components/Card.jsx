@@ -6,12 +6,12 @@ const Card = ({ singleProduct }) => {
     productId,
     productTitle,
     productImage,
-    category,
+    // category,
     price,
-    description,
-    specification,
-    availability,
-    rating,
+    // description,
+    // specification,
+    // availability,
+    // rating,
   } = singleProduct;
   // const { productId } = useParams();
   const navigate = useNavigate();

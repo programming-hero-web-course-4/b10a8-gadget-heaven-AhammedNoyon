@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useLocation, useParams } from "react-router-dom";
+import {
+  useLoaderData,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import NavText from "../NavText";
@@ -13,13 +18,6 @@ const ProductDetails = () => {
     const perProduct = data.find((product) => product.productId == productId);
     setPDetails(perProduct);
   }, [data, productId]);
-  const location = useLocation();
-  const [navText, setNavText] = useState(false);
-  useEffect(() => {
-    if (location.pathname === `/product/${productId}`) {
-      setNavText(true);
-    }
-  }, [location, productId]);
   const {
     productTitle,
     productImage,
@@ -30,7 +28,21 @@ const ProductDetails = () => {
     availability,
     rating,
   } = pDetails;
-  console.log(specification);
+  // console.log(specification);
+
+  const location = useLocation();
+  const [navText, setNavText] = useState(false);
+  useEffect(() => {
+    if (location.pathname === `/product/${productId}`) {
+      setNavText(true);
+    }
+  }, [location, productId]);
+
+  const doNavigate = useNavigate();
+  const handleAddCardAndHeart = () => {
+    doNavigate(`/dashboard/${productId}`);
+  };
+
   return (
     <>
       {navText === true && (
@@ -77,13 +89,19 @@ const ProductDetails = () => {
               <span>{rating}</span>
             </h3>
             <div className="flex gap-8">
-              <button className="btn bg-headerBg rounded-full text-white font-bold text-base">
+              <button
+                onClick={handleAddCardAndHeart}
+                className="btn bg-headerBg rounded-full text-white font-bold text-base"
+              >
                 <span>Add to card icon</span>
                 <span className="text-white">
                   <FaShoppingCart />
                 </span>
               </button>
-              <button className="btn rounded-full">
+              <button
+                onClick={handleAddCardAndHeart}
+                className="btn rounded-full"
+              >
                 <FaRegHeart />
               </button>
             </div>

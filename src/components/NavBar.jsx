@@ -1,10 +1,11 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import NavText from "./NavText";
 import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const { productId } = useParams();
   const location = useLocation();
   const [navBg, setNavBg] = useState("white");
   useEffect(() => {
@@ -62,6 +63,16 @@ const NavBar = () => {
                 to="/dashboard"
               >
                 Dashboard
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? " bg-black text-warning shadow-sm p-2 rounded-xl"
+                    : ""
+                }
+                to="/contact"
+              >
+                Contact Us
               </NavLink>
             </ul>
           </div>

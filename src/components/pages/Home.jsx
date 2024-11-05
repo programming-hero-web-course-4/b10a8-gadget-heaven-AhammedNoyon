@@ -11,7 +11,6 @@ const Home = () => {
     <div>
       {/* banner */}
       <Banner></Banner>
-
       {/* dynamic part*/}
       {/* Heading */}
       <Heading cardHeading="Explore Cutting-Edge Gadgets"></Heading>
