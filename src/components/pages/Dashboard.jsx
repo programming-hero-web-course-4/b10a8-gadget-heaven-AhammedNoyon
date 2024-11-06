@@ -47,11 +47,12 @@ const Dashboard = () => {
     setTotalCost(cost);
   }, [LProduct]);
 
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  const handlePurchase = () => {
-    // setIsModalOpen(true);
+  const [purchaseBtn, setPurchaseBtn] = useState(null);
+  const handlePurchase = (x) => {
+    setPurchaseBtn(x);
     setTotalCost(0);
   };
+  console.log(purchaseBtn);
   const navigate = useNavigate();
   const handleClose = () => {
     navigate("/");
@@ -224,9 +225,13 @@ const Dashboard = () => {
             <button
               onClick={() => {
                 document.getElementById("my_modal_1").showModal();
-                handlePurchase();
+                handlePurchase("purchased");
               }}
-              className="flex border bg-headerBg text-white py-2 px-4 rounded-full text-lg font-bold"
+              className={`flex border  bg-headerBg text-white py-2 px-4 rounded-full text-lg font-bold ${
+                purchaseBtn === "purchased"
+                  ? "opacity-50 cursor-not-allowed"
+                  : ""
+              } `}
             >
               Purchase
             </button>
