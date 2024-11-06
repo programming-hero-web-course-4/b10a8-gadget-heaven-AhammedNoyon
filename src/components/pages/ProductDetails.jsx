@@ -63,6 +63,7 @@ const ProductDetails = () => {
 
   return (
     <>
+      ,
       {navText === true && (
         <NavText
           title="Product Details"
@@ -103,7 +104,38 @@ const ProductDetails = () => {
               <span className="border h-4 w-4 bg-black"></span>
             </h3>
             <h3 className="flex gap-8">
-              <span>rating</span>
+              <span>
+                <div className="rating">
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    defaultChecked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    defaultChecked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                    defaultChecked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
+                    className="mask mask-star-2 bg-orange-400"
+                  />
+                </div>
+              </span>
               <span>{rating}</span>
             </h3>
             <div className="flex gap-8">
