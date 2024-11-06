@@ -8,7 +8,11 @@ import {
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import NavText from "../NavText";
-import { addCartInStore } from "../../utilities/LocalStrage";
+import {
+  addCartInStore,
+  addWishList,
+  getStoredCart,
+} from "../../utilities/LocalStrage";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -33,20 +37,28 @@ const ProductDetails = () => {
 
   const location = useLocation();
   const [navText, setNavText] = useState(false);
+  const [store, setStore] = useState(false);
   useEffect(() => {
     if (location.pathname === `/product/${productId}`) {
       setNavText(true);
     }
   }, [location, productId]);
+  useEffect(() => {
+    const getCartCollectionByCall = getStoredCart();
+    const isExist = getCartCollectionByCall.find(
+      (item) => item.productId === pDetails.productId
+    );
+    if (isExist) {
+      setStore(true);
+    }
+  }, [pDetails]);
 
-  // const doNavigate = useNavigate();
   const handleAddCard = () => {
-    // doNavigate("/dashboard");
     addCartInStore(pDetails);
   };
   const handleHeart = () => {
-    // doNavigate("/dashboard");
-    addCartInStore(pDetails);
+    addWishList(pDetails);
+    setStore(true);
   };
 
   return (
@@ -104,7 +116,11 @@ const ProductDetails = () => {
                   <FaShoppingCart />
                 </span>
               </button>
-              <button onClick={handleHeart} className="btn rounded-full">
+              <button
+                disabled={store}
+                onClick={handleHeart}
+                className="btn rounded-full"
+              >
                 <FaRegHeart />
               </button>
             </div>

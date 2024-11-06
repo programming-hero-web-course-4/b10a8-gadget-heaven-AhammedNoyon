@@ -35,4 +35,34 @@ const removeInLS = (id) => {
   saveNewCartCollectionInStore(remaining);
 };
 
-export { addCartInStore, getStoredCart, removeInLS };
+//heart
+const getStoredWish = () => {
+  const all = localStorage.getItem("getWish");
+  if (all) {
+    const parseAll = JSON.parse(all);
+    return parseAll;
+  }
+  return [];
+};
+
+const addWishList = (LProduct) => {
+  const getWish = getStoredWish();
+
+  const isExistWish = getWish.find(
+    (item) => item.productId == LProduct.productId
+  );
+  if (isExistWish) {
+    return toast.warn("Already Exist");
+  }
+  getWish.push(LProduct);
+  localStorage.setItem("getWish", JSON.stringify(getWish));
+  toast.success("Added successful");
+};
+
+export {
+  addCartInStore,
+  getStoredCart,
+  removeInLS,
+  getStoredWish,
+  addWishList,
+};

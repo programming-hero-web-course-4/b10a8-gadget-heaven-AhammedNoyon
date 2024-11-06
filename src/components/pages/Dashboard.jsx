@@ -1,29 +1,62 @@
+/* eslint-disable no-const-assign */
 import NavText from "../NavText";
 import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
-import { getStoredCart } from "../../utilities/LocalStrage";
+import { getStoredCart, getStoredWish } from "../../utilities/LocalStrage";
 import DashboardCart from "../DashboardCart";
 import DashboardWish from "../DashboardWish";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import modalImg from "../../assets/Group.png";
+
 // import sortBy from "sort-by";
 
 const Dashboard = () => {
+  //cart
   const [LProduct, setLProduct] = useState([]);
   useEffect(() => {
     const storageData = getStoredCart();
     setLProduct(storageData);
   }, []);
   // console.log(LProduct);
-  const [dashboardCart, setDashboardCart] = useState("cart");
+  //heart
+  const [wProduct, setWProduct] = useState([]);
+  useEffect(() => {
+    const DataWish = getStoredWish();
+    setWProduct(DataWish);
+  }, []);
+  console.log(wProduct);
 
+  //disabled
+  const [dashboardCart, setDashboardCart] = useState("cart");
   const handleDashboardCart = (tab) => {
     setDashboardCart(tab);
   };
+
+  //sorted
   const handleSort = (sortBy) => {
     if (sortBy === "price") {
       const sorted = [...LProduct].sort((a, b) => b.price - a.price);
       setLProduct(sorted);
     }
+  };
+
+  const [totalCost, setTotalCost] = useState(0);
+  useEffect(() => {
+    let cost = null;
+    LProduct.map((product) => (cost = cost + parseInt(product.price)));
+    setTotalCost(cost);
+  }, [LProduct]);
+
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const handlePurchase = () => {
+    // setIsModalOpen(true);
+    setTotalCost(0);
+  };
+  const navigate = useNavigate();
+  const handleClose = () => {
+    navigate("/");
+    localStorage.removeItem("cart");
+    setLProduct([]);
   };
   return (
     <>
@@ -67,7 +100,7 @@ const Dashboard = () => {
         </div>
         {dashboardCart === "cart" && (
           <div className="flex items-center gap-4">
-            <h3 className="text-2xl font-bold">Total cost:</h3>
+            <h3 className="text-2xl font-bold">Total cost: {totalCost}</h3>
             <button
               onClick={() => handleSort("price")}
               className="flex border border-headerBg text-headerBg py-2 px-4 rounded-full text-lg font-bold"
@@ -188,9 +221,35 @@ const Dashboard = () => {
                 </svg>
               </span>
             </button>
-            <button className="flex border bg-headerBg text-white py-2 px-4 rounded-full text-lg font-bold">
+            <button
+              onClick={() => {
+                document.getElementById("my_modal_1").showModal();
+                handlePurchase();
+              }}
+              className="flex border bg-headerBg text-white py-2 px-4 rounded-full text-lg font-bold"
+            >
               Purchase
             </button>
+
+            {/* Put this part before </body> tag */}
+
+            <dialog id="my_modal_1" className="modal">
+              <div className="modal-box text-center space-y-2">
+                <img className="mx-auto" src={modalImg} alt="" />
+                <h3 className="font-bold text-2xl">Payment Successfully</h3>
+                <div className="border my-2"></div>
+                <p className="">Thanks for purchasing</p>
+                {/* <p className="text-gray-600 font-bold">{totalCost}</p> */}
+                <div className="">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button onClick={handleClose} className="btn">
+                      Close
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         )}
       </div>
@@ -206,7 +265,7 @@ const Dashboard = () => {
       )}
       {dashboardCart === "wishList" && (
         <div className="mb-24">
-          {LProduct.map((singProduct) => (
+          {wProduct.map((singProduct) => (
             <DashboardWish
               singProduct={singProduct}
               key={singProduct.productId}

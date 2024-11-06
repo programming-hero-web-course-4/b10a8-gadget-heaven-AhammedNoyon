@@ -2,7 +2,7 @@ import PropType from "prop-types";
 import { useEffect, useState } from "react";
 import { NavLink, useLocation, useParams } from "react-router-dom";
 
-const NavText = ({ title, subtitle, buttonText, buttonText2 }) => {
+const NavText = ({ title, subtitle, buttonText, buttonText2, navBg }) => {
   const location = useLocation();
   const { productId } = useParams();
   const [NavTextBg, setNavTextBg] = useState(false);
@@ -22,11 +22,19 @@ const NavText = ({ title, subtitle, buttonText, buttonText2 }) => {
       {/* hero */}
       <div
         className={`hero bg-headerBg ${
-          NavTextBg === true ? "rounded-b-xl " : "rounded-xl"
+          (navBg === "category" || navBg === "headerBg") === true
+            ? "rounded-b-xl "
+            : "rounded-xl"
         }`}
       >
         <div className="hero-content text-center">
-          <div className={` ${NavTextBg === true ? "pb-64" : "pb-10"}`}>
+          <div
+            className={` ${
+              (navBg === "category" || navBg === "headerBg") === true
+                ? "pb-64"
+                : "pb-10"
+            }`}
+          >
             <h1 className="text-[32px]  md:text-[44px] lg:text-[56px] font-bold text-white">
               {title}
             </h1>
@@ -34,7 +42,7 @@ const NavText = ({ title, subtitle, buttonText, buttonText2 }) => {
               {subtitle}
             </p>
             <div>
-              {NavTextBg === true && (
+              {(navBg === "category" || navBg === "headerBg") && (
                 <NavLink
                   to="/dashboard"
                   className="rounded-full text-xl font-bold  px-8 py-4 bg-white text-headerBg"

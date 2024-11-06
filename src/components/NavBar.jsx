@@ -7,24 +7,31 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const NavBar = () => {
-  const { productId } = useParams();
+  // const { productId } = useParams();
+  const { category } = useParams();
+  console.log(category);
   const location = useLocation();
-  const [navBg, setNavBg] = useState("white");
+  const [navBg, setNavBg] = useState("headerBg");
   useEffect(() => {
     if (location.pathname === "/") {
       setNavBg("headerBg");
+    } else if (location.pathname.includes("category")) {
+      setNavBg("category");
+      // console.log("dfjoai");
     } else {
       setNavBg("white");
     }
-  }, [location]);
+  }, [location, category]);
   return (
     <div className="border p-2 rounded-xl relative">
-      <div className={`bg-${navBg}`}>
+      <div className={`bg-${navBg === "category" ? "headerBg" : navBg}`}>
         <div className="navbar px-8 md:px-32 py-7  ">
           <div className="navbar-start">
             <a
               className={`text-xl font-bold ${
-                navBg === "headerBg" ? "text-white" : ""
+                (navBg === "category" || navBg === "headerBg") === true
+                  ? "text-white"
+                  : ""
               }`}
             >
               Gadget Heaven
@@ -33,7 +40,9 @@ const NavBar = () => {
           <div className="navbar-center hidden lg:flex ">
             <ul
               className={`menu menu-horizontal gap-12 px-1 text-lg font-medium ${
-                navBg === "headerBg" ? "text-white" : ""
+                (navBg === "category" || navBg === "headerBg") === true
+                  ? "text-white"
+                  : ""
               } items-center`}
             >
               <NavLink
@@ -90,7 +99,9 @@ const NavBar = () => {
                 tabIndex={0}
                 role="button"
                 className={`btn btn-ghost lg:hidden ${
-                  navBg === "headerBg" ? "text-white" : ""
+                  (navBg === "category" || navBg === "headerBg") === true
+                    ? "text-white"
+                    : ""
                 }`}
               >
                 <svg
@@ -147,8 +158,10 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      {navBg === "headerBg" && (
+
+      {(navBg === "category" || navBg === "headerBg") && (
         <NavText
+          navBg={navBg}
           title="Upgrade Your Tech Accessorize with Gadget Heaven Accessories"
           subtitle="Explore the latest gadgets that will take your experience to the
               next level. From smart devices to the coolest accessories, we have
@@ -156,7 +169,8 @@ const NavBar = () => {
           buttonText="Shop Now"
         ></NavText>
       )}
-      <ToastContainer position="top-center" autoClose={2000} />;
+
+      <ToastContainer position="top-center" autoClose={1000} />
     </div>
   );
 };

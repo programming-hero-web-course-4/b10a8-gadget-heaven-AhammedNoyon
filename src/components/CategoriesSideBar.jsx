@@ -8,21 +8,17 @@ const CategoriesSideBar = ({ categories }) => {
         <ul className="shadow-xl  text-base-content w-60 h-fit flex flex-col gap-4 p-8 rounded-xl border">
           {/* Sidebar content here */}
           {categories.map((category) => (
-            <li
-              className="text-xl font-medium bg-gray-200 py-3 px-4 rounded-full"
+            <NavLink
               key={category.productId}
+              className={({ isActive }) =>
+                isActive
+                  ? " bg-black  text-warning shadow-sm p-2 rounded-xl"
+                  : "text-xl font-medium bg-gray-200 py-3 px-4 rounded-full"
+              }
+              to={`/category/${category.category}`}
             >
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? " bg-black  text-warning shadow-sm p-2 rounded-xl"
-                    : ""
-                }
-                to={`/category/${category.category}`}
-              >
-                {category.category}
-              </NavLink>
-            </li>
+              {category.category}
+            </NavLink>
           ))}
         </ul>
       </div>
