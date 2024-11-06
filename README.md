@@ -8,7 +8,7 @@ This is a gadget store management application developed with React, where users 
 
 ### Live Website
 
-[Live Site Link](gadget-haven-b10-as8.surge.sh)
+[Live Site Link](dslj234sharp-writer.surge.sh)
 
 ### Requirement Document
 
